@@ -1,32 +1,47 @@
 body{
 	font-family: 'Microsoft YaHei',sans-serif;
 }
-/*导航栏*/
+*{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+html{
+	font-size: 16px;
+}
+/*导航栏部分开始===============*/
 .navbar-default{
 	background-color: #fff;
 	border: none;
 	box-shadow: 0px 2px 8px 0px rgba(50,50,50,0.25);
 }
 .navbar-default .navbar-brand{
-	font-size: 26px;
+	font-size: 1.75rem;
 	font-weight: bolder;
 	color: #2c6787;
 	height: 70px;
 	line-height: 35px;
-}
-.navbar-default .navbar-nav #cloud{
-	width: 96px;
-	height: 68px;
-	background-color: pink;
 	position: relative;
 }
+.navbar-default .navbar-nav{
+	position: relative;
+}
+.navbar-default .navbar-nav #cloud{
+	display: block;
+	width: 82px;
+	height: 68px;
+	position: absolute;
+	background: url(../img/cloud.gif) no-repeat center;
+}
+.navbar-default .navbar-nav>li{
+	border-right: 1px solid #e9e9e9;
+}
 .navbar-default .navbar-nav>li>a{
-	font-size: 16px;
+	font-size: 1.2rem;
 	font-weight: bold;
 	color: #666;
 	height: 70px;
 	line-height: 35px;
-	border:1px solid red;
 }
 .navbar-default .navbar-toggle{
 	margin-top: 15px;
@@ -37,4 +52,83 @@ body{
 }
 .navbar-default .navbar-toggle .icon-bar{
 	background-color: #2c6787;
+}/*导航栏部分结束====================*/
+
+/*轮播部分开始========================*/
+.lvjing{
+	margin-top: 72px;
 }
+.row{
+	width: 1200px;
+	height: 700px;
+	padding: 10px;
+	position: relative;
+	background: url(../img/dong.jpg);
+}
+.row .col-md-10{
+	width: 1000px;
+	height: 700px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50px 50px 50px 50px;
+}
+.row .col-md-10 ul{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 6000px;
+}
+.row .col-md-10 ul li{
+	width: 1000px;
+	height: 700px;
+	overflow: hidden;
+	float: left;
+}
+.row .col-md-10 ul li img{
+	width: 1000px;
+	height: 690px;
+}
+.row .col-md-10 ol{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+.row .col-md-10 ol li{
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border: 1px solid #efefef;
+	margin-left: 10px;
+	cursor: pointer;
+}
+.row .col-md-10 ol li.current{
+	background: pink;
+}
+#arr{
+	display: none;
+}
+#arr span{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	left: 118px;
+	top: 50%;
+	margin-top: -20px;
+	background: #000;
+	cursor: pointer;
+	line-height: 50px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 3rem;
+	color: #fff;
+	opacity: 0.3;
+	border: 1px solid #fff;
+}
+#arr #right{
+	right: 100px;
+	left: auto;
+}/*轮播部分结束==========================*/
+
